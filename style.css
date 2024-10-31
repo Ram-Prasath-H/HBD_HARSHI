@@ -1,0 +1,258 @@
+/* Center align content */
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f0e5e5;
+    height: 100vh; /* Use full viewport height */
+    margin: 0; /* Remove default margin */
+}
+
+.container {
+    display: flex;
+    align-items: center; /* Center align items vertically */
+    justify-content: center; /* Center align items horizontally */
+    flex-direction: column;
+    gap: 20px;
+    width: 100%; /* Ensure full width */
+}
+
+/* Image wrapper styles */
+.image-wrapper {
+    display: flex;
+    justify-content: center;
+    width: 100%; /* Ensure full width */
+    height: 350px; /* Set a specific height for the wrapper */
+    overflow: hidden; /* Hide overflow */
+    margin-bottom: 10px; /* Add space between image and card */
+}
+
+.above-card-img {
+    width: 100%; /* Set width to fill the container */
+    height: 100%; /* Set height to fill the wrapper */
+    object-fit: contain; /* Ensure the entire image fits within the container */
+}
+
+/* Carousel styling */
+.carousel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    width: 80%;
+    max-width: 300px;
+    overflow: hidden;
+    margin-top: 20px;
+}
+
+.carousel-images {
+    display: flex;
+    transition: transform 0.5s ease;
+    width: 100%;
+}
+
+.carousel-images img {
+    width: 100%;
+    height: auto;
+}
+
+/* Arrow buttons for carousel */
+.carousel-buttons {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.carousel-button {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 2;
+    font-size: 24px; /* Size for the arrows */
+}
+
+.carousel-button.prev {
+    margin-left: 10px; /* Add margin for positioning */
+}
+
+.carousel-button.next {
+    margin-right: 10px; /* Add margin for positioning */
+}
+
+/* Additional Image styling */
+.additional-image {
+    display: flex;
+    justify-content: center;
+    width: 100%; /* Centering */
+
+}
+
+.additional-image img {
+    width: 100%; /* Make the additional image responsive */
+    max-width: 300px; /* Optional: Set a max width */
+}
+
+/* Birthday card styling */
+.birthdayCard {
+    position: relative;
+    width: 250px;
+    height: 350px;
+    cursor: pointer;
+    transform-style: preserve-3d;
+    transform: perspective(2500px);
+    transition: 4s;
+}
+
+.birthdayCard:hover {
+    transform: perspective(2500px) rotate(5deg);
+    box-shadow: inset 100px 20px 100px rgba(0, 0, 0, .15), 0 10px 100px rgba(0, 0, 0, 0.3);
+}
+
+.birthdayCard:hover .cardFront {
+    transform: rotateY(-160deg);
+}
+
+.birthdayCard:hover .front-text {
+    display: none;
+}
+
+.cardFront {
+    position: relative;
+    background-color: #fff;
+    width: 250px;
+    height: 350px;
+    overflow: hidden;
+    transform-origin: left;
+    box-shadow: inset 100px 20px 100px rgba(0, 0, 0, .13), 30px 0 50px rgba(0, 0, 0, 0.1);
+    transition: .4s;
+}
+
+.happy,
+.toyou {
+    position: relative;
+    font-family: Didot, serif;
+    text-align: center;
+    backface-visibility: hidden;
+}
+
+.happy {
+    top: 198px;
+    font-size: 30px;
+
+}
+
+.toyou {
+    top: 123px;
+    font-size: 24px;
+
+}
+
+
+
+.bday {
+    position: relative;
+    font-family: Arial, sans-serif;
+    font-size: 35px;
+    text-align: center;
+    top: 163px;
+}
+
+.wrap-deco {
+    position: absolute;
+    top: -230px;
+    left: -200px;
+}
+
+.decorations {
+    position: absolute;
+    width: 400px;
+    height: 300px;
+    border: 3px solid #333;
+    border-radius: 50%;
+}
+
+.wrap-decoTwo {
+    transform: scaleX(-1);
+    position: absolute;
+    top: -230px;
+    left: 445px;
+}
+
+.plate {
+    position: absolute;
+    width: 130px;
+    height: 5px;
+    background-color: #00bbf9;
+    left: 60px;
+    top: 213px;
+}
+
+.cake {
+    position: absolute;
+    overflow: hidden;
+    width: 100px;
+    height: 50px;
+    background-color: #f15bb5;
+    border-radius: 10px 10px 0 0;
+    top: -50px;
+    left: 15px;
+}
+
+.flame {
+    position: absolute;
+    background-color: #fb5607;
+    border-radius: 80% 0 55% 50% / 55% 0 80% 50%;
+    transform: rotate(-45deg);
+    width: 15px;
+    height: 15px;
+    opacity: 0.7;
+    top: -93px;
+    left: 57px;
+}
+
+.cardInside {
+    position: absolute;
+    background-color: #fff;
+    width: 250px;
+    height: 350px;
+    z-index: -1;
+    left: 0;
+    top: 0;
+    box-shadow: inset 100px 20px 100px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.inside-text {
+    position: relative;
+    top: 0; /* Remove the negative top offset */
+    left: 0;
+    text-align: center;
+    transform: scale(1); /* Remove scaling */
+    font-size: 1.2em; /* Adjust font size for fit */
+}
+
+.wishes {
+    position: relative;
+    top: 0; /* Keep content within the card */
+    margin: 15px; /* Adjust margin for consistent spacing */
+}
+
+p {
+    font-family: 'Brush Script MT', cursive;
+    color: #333;
+    text-align: center;
+}
+
+.name {
+    margin-left: auto;
+    text-align: right;
+}

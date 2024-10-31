@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Birthday Card</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <div class="image-wrapper">
+            <img src="VCET.jpg" alt="Image Above Card" class="above-card-img">
+        </div>
+    <h3>ClIcK ThE CaRd</h3>
+
+        <div class="birthdayCard">
+            <div class="cardFront">
+                <div class="front-text">
+                    <h3 class="happy">HAPPY</h3>
+                    <h2 class="bday">BIRTHDAY</h2>
+                    <h3 class="toyou">to you! Touch Here</h3>
+   
+
+                </div>
+                <div class="wrap-deco">
+                    <div class="decorations"></div>
+                    <div class="decorationsTwo"></div>
+                </div>
+                <div class="wrap-decoTwo">
+                    <div class="decorations"></div>
+                    <div class="decorationsThree"></div>
+                </div>
+                <div class="plate">
+                    <div class="cake"></div>
+                    <div class="flame"></div>
+                </div>
+            </div>
+            <div class="cardInside">
+                <div class="wishes">
+                    <p>Dear Harshini,</p>
+                    <p>"Happy Birthday!! 🎉 I hope Unaku intha site pudikum which I made for you. It would mean a lot if you’d reply, yaar… 😊 Wishing that all your dreams and birthday wishes come true today and always!"</p>
+                    <p class="name">~ Someone who'd love to be your friend</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Image Carousel -->
+        <div class="carousel">
+            <div class="carousel-images">
+                <img src="image1.jpg" alt="Carousel Image 1">
+                <img src="image2.jpg" alt="Carousel Image 2">
+                <img src="image3.jpg" alt="Carousel Image 3">
+            </div>
+            <div class="carousel-buttons">
+                <button class="carousel-button prev">&#10094;</button>
+                <button class="carousel-button next">&#10095;</button>
+            </div>
+        </div>
+
+        <!-- Additional Image -->
+        <div class="additional-image">
+            <img src="VCETS.jpg" alt="Additional Image">
+        </div>
+    </div>
+
+    <script>
+        const images = document.querySelector('.carousel-images');
+        const imageCount = document.querySelectorAll('.carousel-images img').length;
+        let index = 0;
+
+        document.querySelector('.carousel-button.next').addEventListener('click', () => {
+            index = (index + 1) % imageCount;
+            images.style.transform = `translateX(${-index * 100}%)`;
+        });
+
+        document.querySelector('.carousel-button.prev').addEventListener('click', () => {
+            index = (index - 1 + imageCount) % imageCount;
+            images.style.transform = `translateX(${-index * 100}%)`;
+        });
+    </script>
+
+</body>
+</html>
