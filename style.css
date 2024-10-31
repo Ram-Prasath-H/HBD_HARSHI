@@ -22,7 +22,7 @@ body {
     display: flex;
     justify-content: center;
     width: 100%; /* Ensure full width */
-    height: 350px; /* Set a specific height for the wrapper */
+    height: 325px; /* Set a specific height for the wrapper */
     overflow: hidden; /* Hide overflow */
     margin-bottom: 10px; /* Add space between image and card */
 }
